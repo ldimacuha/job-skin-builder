@@ -32,11 +32,12 @@ export const googleFontCode = data => {
     if (string !== '') {
       font = string.split(' ').join('+');
     }
+    font += ':400,700'
     return font;
   });
 
   return (
-    `<link href="https://fonts.googleapis.com/css?family=` + googleFonts.join('&') + `&display=swap" rel="stylesheet" />`
+    `<link href="https://fonts.googleapis.com/css?family=` + googleFonts.join('|') + `&display=swap" rel="stylesheet" />`
   )
 }
 

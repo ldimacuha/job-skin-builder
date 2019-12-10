@@ -68,11 +68,11 @@ const generateCode = (templateCode, data) => {
   code += '</html>';
 
   if (data.HEADINGS_GOOGLE_FONT.value.trim() !== '') {
-    data.HEADINGS_FONT.value = data.HEADINGS_GOOGLE_FONT.value;
+    data.HEADINGS_FONT.value = "'" + data.HEADINGS_GOOGLE_FONT.value + "', arial, helvetica, sans-serif";
   }
 
   if (data.BODY_GOOGLE_FONT.value.trim() !== '') {
-    data.BODY_FONT.value = data.BODY_GOOGLE_FONT.value;
+    data.BODY_FONT.value = "'" + data.BODY_GOOGLE_FONT.value + "', arial, helvetica, sans-serif";
   }
 
   for (let key in data) {
