@@ -287,7 +287,7 @@ export const jobSkinFields = {
 
   ABOUT_BODY_TEXT: {
     fieldLabel: 'About Us - Body Text',
-    fieldHelper: ['Wrap with <p> ... </p> if more than one paragraph.'],
+    fieldHelper: ['Wrap paragraphs with <p> ... </p> if more than one paragraph.'],
     elementType: 'textarea',
     elementGrid: 'col-sm-12',
     elementConfig: {
