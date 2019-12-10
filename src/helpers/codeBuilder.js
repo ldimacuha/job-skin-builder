@@ -1,14 +1,15 @@
 export const bannerCode = data => {
   let banners = '';
+
   data.forEach((url, i) => {
     let heroClass = ['carousel-item'];
-
-    if (i === 1) {
+    let counter = i + 1;
+    if (counter === 1) {
       heroClass.push('active');
     }
 
     const hero = `<div class="` + heroClass.join(' ') + `">
-      <img src="{{BANNER_URL_` + i + `}}" class="d-block w-100" alt="{{COMPANY_NAME}}" />
+      <img src="{{BANNER_URL_` + counter + `}}" class="d-block w-100" alt="{{COMPANY_NAME}}" />
     </div>`;
 
     if (url.trim() !== '') {
