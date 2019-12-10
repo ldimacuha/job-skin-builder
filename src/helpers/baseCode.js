@@ -370,11 +370,11 @@ export const head = {
     .actions.buttons button {
       background: {{PRIMARY_COLOR}};
       border: 0;
-      border-radius: 0;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      -o-border-radius: 0;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
       color: #ffffff;
       font-size: 16px;
       font-weight: 400;
