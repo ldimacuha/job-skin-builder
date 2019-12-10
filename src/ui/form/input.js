@@ -42,7 +42,7 @@ const Input = props => {
       break;
     case 'heading':
       inputElement = (
-        <h4>{props.fieldLabel}</h4>
+        <h4 className="border-bottom mt-4 pb-2">{props.fieldLabel}</h4>
       );
       break;
     default:
@@ -51,8 +51,14 @@ const Input = props => {
       );
   }
 
+  const helpers = props.fieldHelper ?
+    props.fieldHelper.map(helperText => {
+      return <Form.Text>{helperText}</Form.Text>;
+    })
+    : null;
+
   const fieldLabel = props.fieldLabel && props.elementType !== 'heading' ? <Form.Label>{props.fieldLabel}</Form.Label> : null;
-  const fieldHelper = props.fieldHelper ? <Form.Text>{props.fieldHelper}</Form.Text> : null;
+  const fieldHelper = props.fieldHelper ? helpers : null;
   const fieldRequired = props.shouldValidate ?
     (props.shouldValidate.required ?
       <span className="text-danger">*</span>

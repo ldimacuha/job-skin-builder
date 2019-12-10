@@ -39,7 +39,7 @@ export const generalFields = {
   },
   LOGO_URL: {
     fieldLabel: 'Logo URL',
-    fieldHelper: 'Format: JPG, PNG, or SVG',
+    fieldHelper: ['Format: JPG, PNG, or SVG'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -80,7 +80,7 @@ export const generalFields = {
   },
   PRIMARY_COLOR: {
     fieldLabel: 'Primary Colour',
-    fieldHelper: 'Format: HEX "#FF0000" or RGB "rgb(255,0,0)"',
+    fieldHelper: ['Format: HEX "#FF0000" or RGB "rgb(255,0,0)"'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -97,7 +97,7 @@ export const generalFields = {
   },
   SECONDARY_COLOR: {
     fieldLabel: 'Secondary Colour',
-    fieldHelper: 'Format: HEX "#FF0000" or RGB "rgb(255,0,0)"',
+    fieldHelper: ['Format: HEX "#FF0000" or RGB "rgb(255,0,0)"'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -118,7 +118,7 @@ export const generalFields = {
   },
   HEADINGS_FONT: {
     fieldLabel: 'Heading Font - Web-safe Font',
-    fieldHelper: 'Web-safe font',
+    fieldHelper: ['Web-safe font'],
     elementType: 'select',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -145,7 +145,7 @@ export const generalFields = {
 
   HEADINGS_GOOGLE_FONT: {
     fieldLabel: 'Heading Font - Google Font',
-    fieldHelper: 'Enter one font from https://fonts.google.com/',
+    fieldHelper: ['Enter one font from https://fonts.google.com/'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -160,7 +160,7 @@ export const generalFields = {
 
   BODY_FONT: {
     fieldLabel: 'Body Font - Web-safe Font',
-    fieldHelper: 'Web-safe font',
+    fieldHelper: ['Web-safe font'],
     elementType: 'select',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -187,7 +187,7 @@ export const generalFields = {
 
   BODY_GOOGLE_FONT: {
     fieldLabel: 'Body Font - Google Font',
-    fieldHelper: 'Enter one font from https://fonts.google.com/',
+    fieldHelper: ['Enter one font from https://fonts.google.com/'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -210,7 +210,7 @@ export const jobSkinFields = {
   },
   BANNER_URL_1: {
     fieldLabel: 'Banner Image URL 1',
-    fieldHelper: 'Dimensions: 1500px Width by 430px Height @72dpi | Format: JPG',
+    fieldHelper: ['Dimensions: 1500px Width by 430px Height @72dpi', 'Format: JPG'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -224,7 +224,7 @@ export const jobSkinFields = {
   },
   BANNER_URL_2: {
     fieldLabel: 'Banner Image URL 2',
-    fieldHelper: 'Dimensions: 1500px Width by 430px Height @72dpi | Format: JPG',
+    fieldHelper: ['Dimensions: 1500px Width by 430px Height @72dpi', 'Format: JPG'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -238,7 +238,7 @@ export const jobSkinFields = {
   },
   BANNER_URL_3: {
     fieldLabel: 'Banner Image URL 3',
-    fieldHelper: 'Dimensions: 1500px Width by 430px Height @72dpi | Format: JPG',
+    fieldHelper: ['Dimensions: 1500px Width by 430px Height @72dpi', 'Format: JPG'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -252,7 +252,7 @@ export const jobSkinFields = {
   },
   BANNER_URL_4: {
     fieldLabel: 'Banner Image URL 4',
-    fieldHelper: 'Dimensions: 1500px Width by 430px Height @72dpi | Format: JPG',
+    fieldHelper: ['Dimensions: 1500px Width by 430px Height @72dpi', 'Format: JPG'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -284,24 +284,10 @@ export const jobSkinFields = {
     touched: false,
     error: '',
   },
-  IMAGE_SOURCE_URL: {
-    fieldLabel: 'About Us - Image URL',
-    fieldHelper: 'Alternative to video | Format: JPG',
-    elementType: 'input',
-    elementGrid: 'col-sm-6',
-    elementConfig: {
-      type: 'text',
-      placeholder: '',
-    },
-    value: '',
-    valid: true,
-    touched: false,
-    error: '',
-  },
 
   ABOUT_BODY_TEXT: {
     fieldLabel: 'About Us - Body Text',
-    fieldHelper: 'Wrap with <p> ... </p> if more than one paragraph.',
+    fieldHelper: ['Wrap with <p> ... </p> if more than one paragraph.'],
     elementType: 'textarea',
     elementGrid: 'col-sm-12',
     elementConfig: {
@@ -315,10 +301,10 @@ export const jobSkinFields = {
   },
 
   VIDEO_SOURCE_URL: {
-    fieldLabel: 'About Us - Youtube/Vimeo Video',
-    fieldHelper: 'Get the src="..." attribute of the iframe embed code.',
+    fieldLabel: 'About Us - Youtube/Vimeo Video Source',
+    fieldHelper: ['Get the src="..." attribute of the iframe embed code.'],
     elementType: 'input',
-    elementGrid: 'col-sm-12',
+    elementGrid: 'col-sm-6',
     elementConfig: {
       type: 'text',
       placeholder: '',
@@ -327,6 +313,21 @@ export const jobSkinFields = {
     valid: true,
     touched: false,
     error: '',
+  },
+
+  IMAGE_SOURCE_URL: {
+    fieldLabel: 'About Us - Image URL',
+    fieldHelper: ['Alternative to video', 'Dimensions: 500px Width x 375px Height @72dpi', 'Format: JPG'],
+    elementType: 'input',
+      elementGrid: 'col-sm-6',
+      elementConfig: {
+        type: 'text',
+        placeholder: '',
+      },
+      value: '',
+      valid: true,
+      touched: false,
+      error: '',
   },
 
   heading_social: {
