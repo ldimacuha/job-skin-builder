@@ -80,7 +80,7 @@ export const generalFields = {
   },
   PRIMARY_COLOR: {
     fieldLabel: 'Primary Colour',
-    fieldHelper: 'Format: HEX "#CC0000" or RGB "rgb(255,0,0)"',
+    fieldHelper: 'Format: HEX "#FF0000" or RGB "rgb(255,0,0)"',
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -97,7 +97,7 @@ export const generalFields = {
   },
   SECONDARY_COLOR: {
     fieldLabel: 'Secondary Colour',
-    fieldHelper: 'Format: HEX "#CC0000" or RGB "rgb(255,0,0)"',
+    fieldHelper: 'Format: HEX "#FF0000" or RGB "rgb(255,0,0)"',
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
@@ -301,6 +301,7 @@ export const jobSkinFields = {
 
   ABOUT_BODY_TEXT: {
     fieldLabel: 'About Us - Body Text',
+    fieldHelper: 'Wrap with <p> ... </p> if more than one paragraph.',
     elementType: 'textarea',
     elementGrid: 'col-sm-12',
     elementConfig: {
@@ -312,13 +313,14 @@ export const jobSkinFields = {
     touched: false,
     error: '',
   },
+
   VIDEO_SOURCE_URL: {
-    fieldLabel: 'About Us - Video',
-    fieldHelper: 'Youtube or Vimeo Embed Source',
-    elementType: 'textarea',
+    fieldLabel: 'About Us - Youtube/Vimeo Video',
+    fieldHelper: 'Get the src="..." attribute of the iframe embed code.',
+    elementType: 'input',
     elementGrid: 'col-sm-12',
     elementConfig: {
-      type: 'textarea',
+      type: 'text',
       placeholder: '',
     },
     value: '',
