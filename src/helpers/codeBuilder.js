@@ -79,16 +79,17 @@ export const aboutCode = data => {
   const image = `<img src="{{IMAGE_SOURCE_URL}}" alt="{{COMPANY_NAME}}" class="img-fluid rounded" />`;
   const video =
     `<div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" src="{{VIDEO_SOURCE_URL}}" frameborder="0"
-        allow="autoplay; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>`;
+  <iframe class="embed-responsive-item" src="{{VIDEO_SOURCE_URL}}" frameborder="0"
+  allow="autoplay; fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen></iframe>
+  </div>`;
 
   let aboutGraphic = '';
-  switch (data) {
-    case 'video': aboutGraphic = video; break;
-    case 'image': aboutGraphic = image; break;
-    default: { }
+  if (data[1] !== '') {
+    aboutGraphic += image;
+  }
+  if (data[0] !== '') {
+    aboutGraphic += video;
   }
 
   return (

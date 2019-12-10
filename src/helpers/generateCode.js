@@ -20,16 +20,9 @@ const generateCode = (templateCode, data) => {
   }
 
   const bannerDataInputs = [data.BANNER_URL_1.value, data.BANNER_URL_2.value, data.BANNER_URL_3.value, data.BANNER_URL_4.value];
-  let aboutGraphic = '';
-  if (data.VIDEO_SOURCE_URL.value !== '') {
-    aboutGraphic = 'video';
-  } else {
-    if (data.IMAGE_SOURCE_URL.value !== '') {
-      aboutGraphic = 'image';
-    }
-  }
 
   const fontInputs = [data.HEADINGS_GOOGLE_FONT.value, data.BODY_GOOGLE_FONT.value];
+
   const aboutSectionInputs = [data.ABOUT_HEADING_TEXT.value, data.ABOUT_BODY_TEXT.value, data.VIDEO_SOURCE_URL.value, data.IMAGE_SOURCE_URL.value];
 
   let code = htmlwrapper;
@@ -53,7 +46,7 @@ const generateCode = (templateCode, data) => {
 
   code += baseCode.additional_sections;
   if (aboutSectionInputs.join('') !== '') {
-    code += aboutCode(aboutGraphic);
+    code += aboutCode([data.VIDEO_SOURCE_URL.value, data.IMAGE_SOURCE_URL.value]);
   }
 
   if (socialIconsInputs.length > 0) {
