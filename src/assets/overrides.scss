@@ -1,0 +1,10 @@
+nav {
+  &.navbar {
+    background: #084d6d !important;
+  }
+}
+
+.modal-body .code-snippet {
+  max-height: 300px;
+  overflow: auto;
+}
