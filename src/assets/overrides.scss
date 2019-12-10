@@ -2,6 +2,15 @@ nav {
   &.navbar {
     background: #084d6d !important;
   }
+  .navbar-brand {
+    small {
+      background: #ffffff;
+      border-radius: 2px;
+      color: #000000;
+      font-size: 10px;
+      padding: 2px;
+    }
+  }
 }
 
 .modal-body .code-snippet {
