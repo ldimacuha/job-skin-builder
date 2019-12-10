@@ -97,7 +97,7 @@ export const aboutCode = data => {
       <div class="row">
         <div class="col-md text-center text-sm-left">
           <h1>{{ABOUT_HEADING_TEXT}}</h1>
-          <p>{{ABOUT_BODY_TEXT}}</p>
+          {{ABOUT_BODY_TEXT}}
         </div>
         <div class="col-md text-center text-sm-left">`
     + aboutGraphic +
