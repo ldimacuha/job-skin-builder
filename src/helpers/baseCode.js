@@ -310,6 +310,8 @@ export const head = {
       font-weight: 700;
     }
 
+    #questions>fieldset fieldset.choices,
+    #resume>fieldset fieldset.choices,
     #questions>fieldset.inputs>ol>li,
     #resume>fieldset.inputs {
       margin-bottom: 15px;
