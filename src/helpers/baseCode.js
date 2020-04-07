@@ -301,7 +301,7 @@ export const head = {
     #resume>h2 {
       color: #000000;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 400;
       text-transform: none;
     }
 
