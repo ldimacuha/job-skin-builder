@@ -54,12 +54,14 @@ export const footerCode = data => {
     }
   });
 
+  const currentYear = new Date().getFullYear();
+
   return (
     `<footer>
     <div class="container">
-      <div class="row">
-        <div class="col-sm text-center text-sm-left mt-2">
-          Copyright &copy; 2019 {{COMPANY_NAME}}
+      <div class="row align-items-center">
+        <div class="col-sm text-center text-sm-left">
+          Copyright &copy; ` + currentYear + `{{COMPANY_NAME}}
           <a href="https://www.applynow.com.au/privacy" target="_blank" rel="noreferrer noopener">Privacy
             Policy</a> | <a href="https://www.applynow.com.au/terms" target="_blank" rel="noreferrer noopener">Terms and
             Conditions</a>
@@ -92,6 +94,8 @@ export const aboutCode = data => {
     aboutGraphic += video;
   }
 
+  const aboutGraphicContainer = `<div class="col-md text-center text-sm-left">` + aboutGraphic + `</div>`;
+
   return (
     `<div class="container-fluid section section-alt extra-content-section" id="about-section">
     <div class="container">
@@ -99,11 +103,9 @@ export const aboutCode = data => {
         <div class="col-md text-center text-sm-left">
           <h1>{{ABOUT_HEADING_TEXT}}</h1>
           {{ABOUT_BODY_TEXT}}
-        </div>
-        <div class="col-md text-center text-sm-left">`
-    + aboutGraphic +
+        </div>`
+    + aboutGraphicContainer +
     `</div>
-      </div>
     </div>
   </div>`
   )
