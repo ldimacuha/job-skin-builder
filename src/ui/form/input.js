@@ -37,6 +37,26 @@ const Input = props => {
           ))}
         </Form.Control>;
       break;
+    case 'checkbox':
+      inputElement =
+        <Form.Check className={inputClasses.join(' ')} checked={props.value} {...props.elementConfig} onChange={props.changed} />;
+      break;
+    case 'radio':
+      inputElement =
+        <>
+          {props.elementConfig.options.map(option => (
+            <Form.Check
+              key={option.value}
+              className={inputClasses.join(' ')}
+              label={option.displayValue}
+              value={option.value}
+              checked={option.value === props.value ? true : false}
+              id={props.elementConfig.name + option.value}
+              {...props.elementConfig}
+              onChange={props.changed} />
+          ))}
+        </>
+      break;
     case 'heading':
       inputElement = <h4 className="border-bottom mt-4 pb-2">{props.fieldLabel}</h4>;
       break;

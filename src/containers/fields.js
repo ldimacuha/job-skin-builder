@@ -391,6 +391,47 @@ export const jobSkinFields = {
     touched: false,
     error: '',
   },
+
+  heading_poweredbyscout: {
+    fieldLabel: 'Powered by Scout',
+    elementType: 'heading',
+    elementGrid: 'col-12',
+    valid: true
+  },
+
+  POWERED_BY_SCOUT: {
+    fieldLabel: null,
+    elementType: 'checkbox',
+    elementGrid: 'col-sm-6',
+    elementConfig: {
+      type: 'checkbox',
+      label: 'Show Powered by Scout Talent',
+      id: 'powered_by_scout',
+    },
+    value: true,
+    valid: true,
+    touched: false,
+    error: '',
+  },
+
+  POWERED_BY_SCOUT_COUNTRY: {
+    fieldLabel: null,
+    elementType: 'radio',
+    elementGrid: 'col-sm-6',
+    elementConfig: {
+      type: 'radio',
+      name: 'powered_by_scout_country',
+      options: [
+        { value: 'https://scouttalenthq.com', displayValue: 'Australia' },
+        { value: 'https://scouttalent.ca', displayValue: 'Canada' },
+      ]
+    },
+    value: 'https://scouttalenthq.com',
+    valid: true,
+    touched: false,
+    error: '',
+  },
+
 }
 
 export default generalFields;

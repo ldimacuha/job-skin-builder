@@ -50,7 +50,7 @@ const generateCode = (templateCode, data) => {
   }
 
   if (socialIconsInputs.length > 0) {
-    code += footerCode(socialIcons);
+    code += footerCode(socialIcons, data.POWERED_BY_SCOUT.value);
   }
 
   code += baseCode.boilerplate_js;

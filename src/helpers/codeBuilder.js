@@ -41,36 +41,41 @@ export const googleFontCode = data => {
   )
 }
 
-export const footerCode = data => {
+export const footerCode = (socialIcons, poweredByScout) => {
   let string = '';
-
-  data.forEach((type) => {
+  socialIcons.forEach((type) => {
     switch (type) {
-      case 'facebook': string = string + '<a href="{{FB_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square"></i></a>'; break;
-      case 'twitter': string = string + '<a href="{{TW_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-twitter-square"></i></a>'; break;
-      case 'instagram': string = string + '<a href="{{IG_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i></a>'; break;
-      case 'linkedin': string = string + '<a href="{{LI_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin"></i></a>'; break;
+      case 'facebook': string += '<a href="{{FB_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook-square"></i></a>'; break;
+      case 'twitter': string += '<a href="{{TW_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-twitter-square"></i></a>'; break;
+      case 'instagram': string += '<a href="{{IG_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i></a>'; break;
+      case 'linkedin': string += '<a href="{{LI_URL}}" target="_blank" rel="noreferrer noopener"><i class="fab fa-linkedin"></i></a>'; break;
       default: { }
     }
   });
 
   const currentYear = new Date().getFullYear();
+  const poweredByScoutCode = poweredByScout ? `<div class="d-block">Powered by <a href="{{POWERED_BY_SCOUT_COUNTRY}}" target="_blank">Scout Talent</a></div>` : '';
 
   return (
     `<footer>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-sm text-center text-sm-left">
-          Copyright &copy; ` + currentYear + `{{COMPANY_NAME}}
-          <a href="https://www.applynow.com.au/privacy" target="_blank" rel="noreferrer noopener">Privacy
-            Policy</a> | <a href="https://www.applynow.com.au/terms" target="_blank" rel="noreferrer noopener">Terms and
-            Conditions</a>
+      <div class="d-flex flex-column flex-sm-row flex-wrap align-items-center">
+        <div class="mr-sm-auto text-center text-sm-left">
+          <div class="copyright">
+            &copy; ` + currentYear + ` {{COMPANY_NAME}}
+          </div>
+          <div class="footer-links">
+            <a href="https://www.applynow.com.au/privacy" target="_blank" rel="noreferrer noopener">Privacy
+              Policy</a> | <a href="https://www.applynow.com.au/terms" target="_blank" rel="noreferrer noopener">Terms and
+              Conditions</a>
+          </div>
         </div>
-        <div class="col-sm text-center text-sm-right">
+        <div class="text-center text-sm-right">
           <div class="social-links">`
     + string +
+    `</div>`
+    + poweredByScoutCode +
     `</div>
-        </div>
       </div>
     </div>
   </footer>`

@@ -22,7 +22,8 @@ const JobSkinBuilder = props => {
       ...updatedForm[inputIdentifier],
     };
 
-    updatedFormElement.value = event.target.value;
+    updatedFormElement.value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
+
     updatedFormElement.valid = checkValidity(
       updatedFormElement.value,
       updatedFormElement.validation
