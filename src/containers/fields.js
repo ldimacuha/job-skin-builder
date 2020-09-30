@@ -23,11 +23,12 @@ export const generalFields = {
   },
   WEBSITE_URL: {
     fieldLabel: 'Website URL',
+    fieldHelper: ['Format:  "http://www.website.com" or "https://www.website.com"'],
     elementType: 'input',
     elementGrid: 'col-sm-6',
     elementConfig: {
       type: 'text',
-      placeholder: '',
+      placeholder: 'e.g. https://www.scouttalenthq.com',
     },
     value: '',
     validation: {
